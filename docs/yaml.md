@@ -1,14 +1,30 @@
-# General Styleguide
+# Yaml
 
-## Verifying style
+## Lint Configuration
 
-A `.yamllint` file has been added to the git repository to allow easy linting. It can be consumed with the
-[yamllint tool](https://github.com/adrienverge/yamllint), found in most OS package repositories.
+The following configuration [for the tool `yamllint`](https://github.com/adrienverge/yamllint) will pick up the required styleguide:
 
-Additionally, an `.arclint`  file has been created to aggregate the lints in a pre-commit hook as defined
-in a [post written by Andrew Howden](https://medium.com/@andrewhowdencom/i-successfully-fake-being-a-tidy-developer-with-this-one-weird-trick-okay-git-hooks-733573b1c679).
+```yaml
+---
+extends: default
 
-## Yaml files
+rules:
+  line-length:
+    max: 120
+  comments-indentation: disable
+  braces:
+    max-spaces-inside: 1
+```
+
+## Rules
+
+### Braces
+
+Braces should have a max of 1 space delimiting operators. For example, 
+
+```yaml
+object: { key1: 4, key2: 8 }
+```
 
 ### File declaration
 
@@ -27,7 +43,11 @@ foo: "bar"
 
 This allows easy concatenation of multiple files together.
 
-### Value quotation.
+### Line Length
+
+Lines should not exceed 120 characters where possible.
+
+### Value quotation
 
 String values should be quoted, but numeric or boolean values should not. For example,
 
@@ -53,4 +73,3 @@ Or in cases where the content may include special characters:
 string: "string: string"
 string: "true"
 ```
-
