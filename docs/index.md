@@ -1,5 +1,3 @@
-# Sitewards Coding Standard
-
 ## What is this?
 
 These are the Sitewards Coding Standards. They're here on GitHub to make them easy to find, and that developers from
