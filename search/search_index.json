@@ -2,23 +2,118 @@
     "docs": [
         {
             "location": "/",
-            "text": "Welcome to MkDocs\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
-            "title": "Welcome to MkDocs"
+            "text": "Sitewards Coding Standard\n\n\nWhat is this?\n\n\nThese are the Sitewards Coding Standards. They're here on GitHub to make them easy to find, and that developers from\nboth the open source community and our internal development team can have a canonical reference.\n\n\nWhere do I find the standards?\n\n\nWhere defined, standards are available in the nav menu.",
+            "title": "Sitewards Coding Standard"
         },
         {
-            "location": "/#welcome-to-mkdocs",
-            "text": "For full documentation visit  mkdocs.org .",
-            "title": "Welcome to MkDocs"
+            "location": "/#sitewards-coding-standard",
+            "text": "",
+            "title": "Sitewards Coding Standard"
         },
         {
-            "location": "/#commands",
-            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.",
-            "title": "Commands"
+            "location": "/#what-is-this",
+            "text": "These are the Sitewards Coding Standards. They're here on GitHub to make them easy to find, and that developers from\nboth the open source community and our internal development team can have a canonical reference.",
+            "title": "What is this?"
         },
         {
-            "location": "/#project-layout",
-            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
-            "title": "Project layout"
+            "location": "/#where-do-i-find-the-standards",
+            "text": "Where defined, standards are available in the nav menu.",
+            "title": "Where do I find the standards?"
+        },
+        {
+            "location": "/certificates/",
+            "text": "Certificates\n\n\nGenerally speaking certificates should use the following values:\n\n\n\n\n\n\n\n\nField\n\n\nValue\n\n\n\n\n\n\n\n\n\n\nCountry Name\n\n\nDE\n\n\n\n\n\n\nState\n\n\nHessen\n\n\n\n\n\n\nLocality\n\n\nFrankfurt am Main\n\n\n\n\n\n\nOrganisation Name\n\n\nSitewards GmbH\n\n\n\n\n\n\nOrganisational Unit\n\n\nEngineering\n\n\n\n\n\n\nEmail Address\n\n\n${YOUR_MAIL_ADDRESS}\n\n\n\n\n\n\n\n\nThe only field that varies based on the certificate role is the \"Common Name\" field. This field is used in different\nways depending on the certificate, but only a single certificate matching those details can be created. Thus, the\ncommon name should be created with the following conventions:\n\n\n\n\n\n\n\n\nCertificate Type\n\n\nCommon Name\n\n\n\n\n\n\n\n\n\n\nAuthority\n\n\nca.${TYPE}.${DOMAIN}.de\n\n\n\n\n\n\nServer\n\n\n${HOSTNAME_OF_SERVER}\n\n\n\n\n\n\nClient\n\n\n${LINUX_USER}@${HOSTNAME_OF_SERVER}\n\n\n\n\n\n\n\n\nShould the server not be addressable at the hostname address, please use the Subject Alternative Name (SAN) specification\nof X509 to extend the validity of the certificate to multiple names.",
+            "title": "Certificates"
+        },
+        {
+            "location": "/certificates/#certificates",
+            "text": "Generally speaking certificates should use the following values:     Field  Value      Country Name  DE    State  Hessen    Locality  Frankfurt am Main    Organisation Name  Sitewards GmbH    Organisational Unit  Engineering    Email Address  ${YOUR_MAIL_ADDRESS}     The only field that varies based on the certificate role is the \"Common Name\" field. This field is used in different\nways depending on the certificate, but only a single certificate matching those details can be created. Thus, the\ncommon name should be created with the following conventions:     Certificate Type  Common Name      Authority  ca.${TYPE}.${DOMAIN}.de    Server  ${HOSTNAME_OF_SERVER}    Client  ${LINUX_USER}@${HOSTNAME_OF_SERVER}     Should the server not be addressable at the hostname address, please use the Subject Alternative Name (SAN) specification\nof X509 to extend the validity of the certificate to multiple names.",
+            "title": "Certificates"
+        },
+        {
+            "location": "/ansible/general/",
+            "text": "General Styleguide\n\n\nVerifying style\n\n\nA \n.yamllint\n file has been added to the git repository to allow easy linting. It can be consumed with the\n\nyamllint tool\n, found in most OS package repositories.\n\n\nAdditionally, an \n.arclint\n  file has been created to aggregate the lints in a pre-commit hook as defined\nin a \npost written by Andrew Howden\n.\n\n\nYaml files\n\n\nFile declaration\n\n\nFiles should start with the yaml file declaration:\n\n\n---\n\n\n\n\nFor example,\n\n\n---\nfoo: \"bar\"\n\n\n\n\nThis allows easy concatenation of multiple files together.\n\n\nValue quotation.\n\n\nString values should be quoted, but numeric or boolean values should not. For example,\n\n\n---\nstring: \"bar\"\nnumber: 15\n\nboolean: true\n\n\n\n\nThis allows being clear in the edge cases where content could be either a number or a string:\n\n\n---\nstring: \"0438123456\"\n\n\n\n\nOr in cases where the content may include special characters:\n\n\n---\nstring: \"string: string\"\nstring: \"true\"",
+            "title": "General Styleguide"
+        },
+        {
+            "location": "/ansible/general/#general-styleguide",
+            "text": "",
+            "title": "General Styleguide"
+        },
+        {
+            "location": "/ansible/general/#verifying-style",
+            "text": "A  .yamllint  file has been added to the git repository to allow easy linting. It can be consumed with the yamllint tool , found in most OS package repositories.  Additionally, an  .arclint   file has been created to aggregate the lints in a pre-commit hook as defined\nin a  post written by Andrew Howden .",
+            "title": "Verifying style"
+        },
+        {
+            "location": "/ansible/general/#yaml-files",
+            "text": "",
+            "title": "Yaml files"
+        },
+        {
+            "location": "/ansible/general/#file-declaration",
+            "text": "Files should start with the yaml file declaration:  ---  For example,  ---\nfoo: \"bar\"  This allows easy concatenation of multiple files together.",
+            "title": "File declaration"
+        },
+        {
+            "location": "/ansible/general/#value-quotation",
+            "text": "String values should be quoted, but numeric or boolean values should not. For example,  ---\nstring: \"bar\"\nnumber: 15\n\nboolean: true  This allows being clear in the edge cases where content could be either a number or a string:  ---\nstring: \"0438123456\"  Or in cases where the content may include special characters:  ---\nstring: \"string: string\"\nstring: \"true\"",
+            "title": "Value quotation."
+        },
+        {
+            "location": "/ansible/roles/",
+            "text": "Roles\n\n\n\"Known Good\" role providers:\n\n\nNote: The usage of these roles do not relieve you of the responsibility of doing a manual code review.\n\n\n\n\nSitewards\n\n\nJeff Geerling\n\n\nJulien\n\n\n\n\nNaming\n\n\nRoles should be named in the format:\n\n\n${VENDOR}.${ROLE}\n\n\n\n\nSome examples include:\n\n\nsitewards.developer-access\ngeerlingguy.mysql\njuju4.falco\n\n\n\n\nWhere possible, it is preferred to use the hyphen (\n-\n) character over the underscore (\n_\n) character.\n\n\n${INVENTORY} specific roles\n\n\nDo not write them\n. Examples such as:\n\n\n   - { role: clamav, when: \"current_env == 'production'\" }\n\n\n\n\nAre an antipattern. The pose several problems:\n\n\n\n\nAnsible cannot be adequately tested, except by applying it to produciton\n\n\nThe roles are inherently unstable, being less subject to the same review as other roles\n\n\nThe roles are not reusable\n\n\n\n\nInstead, if roles are not required in a given environment supply configuration that implies\nthey are empty. For example, in the case of:\n\n\n  - \"sitewards.lets-encrypt\"\n\n\n\n\nSupplying the host fact:\n\n\nlets_encrypt_resources: []\n\n\n\n\nwill apply only a minimal configuration, and request zero certificates.",
+            "title": "Roles"
+        },
+        {
+            "location": "/ansible/roles/#roles",
+            "text": "",
+            "title": "Roles"
+        },
+        {
+            "location": "/ansible/roles/#known-good-role-providers",
+            "text": "Note: The usage of these roles do not relieve you of the responsibility of doing a manual code review.   Sitewards  Jeff Geerling  Julien",
+            "title": "\"Known Good\" role providers:"
+        },
+        {
+            "location": "/ansible/roles/#naming",
+            "text": "Roles should be named in the format:  ${VENDOR}.${ROLE}  Some examples include:  sitewards.developer-access\ngeerlingguy.mysql\njuju4.falco  Where possible, it is preferred to use the hyphen ( - ) character over the underscore ( _ ) character.",
+            "title": "Naming"
+        },
+        {
+            "location": "/ansible/roles/#inventory-specific-roles",
+            "text": "Do not write them . Examples such as:     - { role: clamav, when: \"current_env == 'production'\" }  Are an antipattern. The pose several problems:   Ansible cannot be adequately tested, except by applying it to produciton  The roles are inherently unstable, being less subject to the same review as other roles  The roles are not reusable   Instead, if roles are not required in a given environment supply configuration that implies\nthey are empty. For example, in the case of:    - \"sitewards.lets-encrypt\"  Supplying the host fact:  lets_encrypt_resources: []  will apply only a minimal configuration, and request zero certificates.",
+            "title": "${INVENTORY} specific roles"
+        },
+        {
+            "location": "/ansible/tasks/",
+            "text": "Tasks\n\n\nOption format\n\n\nA task should take options only in the following format:\n\n\n# Removes all anonymous user accounts\n- mysql_user:\n    name: ''\n    host_all: \"yes\"\n    state: \"absent\"\n\n\n\n\nAn alternative but \nnow deprecated\n is as follows:\n\n\n---\n# Removes all anonymous user accounts\n- mysql_user name='' host_all=yes state=absent\n\n\n\n\nVariables\n\n\nWhere a task uses a variable, that variable should be documented in the \n${ROLE_ROOT}/defaults/main.yml\n file, with\nan appropriate default value if possible.\n\n\nFor example, in the following task the variable \nsitewards__locales__locales\n is used.\n\n\n---\n- name: Ensure necessary locales exist\n  locale_gen:\n    name: \"{{ item }}\"\n    state: present\n  with_items: \"{{ sitewards__locales__locales }}\"\n\n\n\n\nThis should be documented with in the \n${ROLE_ROOT}/defaults/main.yml\n as follows:\n\n\n## This variable denotes the locales that should be installed on a given machine. It takes an array of locales\n## ensuring each are present.\n##\n## For a full list of locales (on a Debian based system) see \"/usr/share/i18n/SUPPORTED\"\n## (Optional)\nsitewards__locales__locales: []\n# - en_US\n\n\n\n\nThe \"Double hash\" syntax is used to denote comments that describe the body of the code, and the \"Single hash\" syntax\nis used to denote example code.\n\n\nSpecific Tasks\n\n\nTemplate\n\n\nWhere the \"template\" task is used, the template should be reflected in the \ntemplates\n directory in the same path it\nwould appear on the destination infrastructure. For example, if installing an NGINX vhost the layout for the role\nwould be:\n\n\ntasks/main.yml\ntemplates/etc/nginx/sites-enabled/000-default.conf\n\n\n\n\nwhere the path on the destination machine would be \n/etc/nginx/sites-enabled/000-default.conf\n.\n\n\nThe task would then look like:\n\n\n- name: \"Install the NGINX default vhost\"\n  template:\n    src: \"etc/nginx/sites-enabled/000-default.conf\"\n    dest: \"/etc/nginx/sites-enabled/000-defualt.conf\"\n    owner: \"root\"\n    mode: \"u=rw,g=r,o=r\"",
+            "title": "Tasks"
+        },
+        {
+            "location": "/ansible/tasks/#tasks",
+            "text": "",
+            "title": "Tasks"
+        },
+        {
+            "location": "/ansible/tasks/#option-format",
+            "text": "A task should take options only in the following format:  # Removes all anonymous user accounts\n- mysql_user:\n    name: ''\n    host_all: \"yes\"\n    state: \"absent\"  An alternative but  now deprecated  is as follows:  ---\n# Removes all anonymous user accounts\n- mysql_user name='' host_all=yes state=absent",
+            "title": "Option format"
+        },
+        {
+            "location": "/ansible/tasks/#variables",
+            "text": "Where a task uses a variable, that variable should be documented in the  ${ROLE_ROOT}/defaults/main.yml  file, with\nan appropriate default value if possible.  For example, in the following task the variable  sitewards__locales__locales  is used.  ---\n- name: Ensure necessary locales exist\n  locale_gen:\n    name: \"{{ item }}\"\n    state: present\n  with_items: \"{{ sitewards__locales__locales }}\"  This should be documented with in the  ${ROLE_ROOT}/defaults/main.yml  as follows:  ## This variable denotes the locales that should be installed on a given machine. It takes an array of locales\n## ensuring each are present.\n##\n## For a full list of locales (on a Debian based system) see \"/usr/share/i18n/SUPPORTED\"\n## (Optional)\nsitewards__locales__locales: []\n# - en_US  The \"Double hash\" syntax is used to denote comments that describe the body of the code, and the \"Single hash\" syntax\nis used to denote example code.",
+            "title": "Variables"
+        },
+        {
+            "location": "/ansible/tasks/#specific-tasks",
+            "text": "",
+            "title": "Specific Tasks"
+        },
+        {
+            "location": "/ansible/tasks/#template",
+            "text": "Where the \"template\" task is used, the template should be reflected in the  templates  directory in the same path it\nwould appear on the destination infrastructure. For example, if installing an NGINX vhost the layout for the role\nwould be:  tasks/main.yml\ntemplates/etc/nginx/sites-enabled/000-default.conf  where the path on the destination machine would be  /etc/nginx/sites-enabled/000-default.conf .  The task would then look like:  - name: \"Install the NGINX default vhost\"\n  template:\n    src: \"etc/nginx/sites-enabled/000-default.conf\"\n    dest: \"/etc/nginx/sites-enabled/000-defualt.conf\"\n    owner: \"root\"\n    mode: \"u=rw,g=r,o=r\"",
+            "title": "Template"
         }
     ]
 }

@@ -5,4 +5,24 @@
      <lastmod>2018-08-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
+    <url>
+     <loc>/certificates/</loc>
+     <lastmod>2018-08-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>/ansible/general/</loc>
+     <lastmod>2018-08-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>/ansible/roles/</loc>
+     <lastmod>2018-08-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>/ansible/tasks/</loc>
+     <lastmod>2018-08-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
 </urlset>
